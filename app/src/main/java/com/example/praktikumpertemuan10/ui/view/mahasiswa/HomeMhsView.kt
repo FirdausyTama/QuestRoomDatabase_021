@@ -89,9 +89,9 @@ fun HomeMhsView(
 
 @Composable
 fun BodyHomeMhsView(
-  homeUiState: HomeUiState,
-  onClick: (String) -> Unit = { },
-  modifier: Modifier = Modifier
+    homeUiState: HomeUiState,
+    onClick: (String) -> Unit = { },
+    modifier: Modifier = Modifier
 ){
     val coroutineScope = rememberCoroutineScope()
     val snackbarHostState = remember { SnackbarHostState() } // Snackbar state
@@ -152,7 +152,7 @@ fun ListMahasiswa(
     onClick: (String) -> Unit = { }
 ){
     LazyColumn (
-        modifier = Modifier
+        modifier = modifier
     ){
         items(
             items = listMhs,
@@ -173,7 +173,7 @@ fun CardMhs(
     modifier: Modifier = Modifier,
     onClick: () -> Unit = { }
 ){
-    Card(
+    Card (
         onClick = onClick,
         modifier = modifier
             .fillMaxWidth()
@@ -198,7 +198,7 @@ fun CardMhs(
                 modifier = Modifier.fillMaxWidth(),
                 verticalAlignment = Alignment.CenterVertically
             ){
-                Icon(imageVector = Icons.Filled.DateRange, contentDescription = "")
+                Icon(imageVector = Icons.Filled.DateRange, contentDescription = "" )
                 Spacer(modifier = Modifier.padding(4.dp))
                 Text(
                     text = mhs.nim,

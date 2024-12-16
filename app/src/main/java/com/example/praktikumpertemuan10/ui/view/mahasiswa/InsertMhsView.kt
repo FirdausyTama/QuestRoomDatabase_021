@@ -83,7 +83,7 @@ fun FormMahasiswa(
         Spacer(modifier = Modifier.height(16.dp))
         Text(text = "Jenis Kelamin")
         Row(
-           modifier = Modifier.fillMaxWidth()
+            modifier = Modifier.fillMaxWidth()
         ){
             jenisKelamin.forEach { jk ->
                 Row (
